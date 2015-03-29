@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UISearchResultsUpdating, UISearchControllerDelegate>
 
+@property (weak, nonatomic) IBOutlet UITableView *lister;
 
 @end
 
