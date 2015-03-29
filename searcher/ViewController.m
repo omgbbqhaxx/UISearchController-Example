@@ -64,9 +64,8 @@
 
     self.navigationItem.titleView = self.searchController.searchBar;
     self.searchController.hidesNavigationBarDuringPresentation = NO;
- 
-    // Enable presentation context.
     
+    // Enable presentation context.
     self.definesPresentationContext = YES;
 }
 
@@ -170,7 +169,12 @@
     self.navigationItem.rightBarButtonItem = nil;
     self.searcBarButton = nil;
     [self.searchController.searchBar setHidden:NO];
-    [self.searchController setActive:YES];
+    [self.searchController.searchBar becomeFirstResponder];
+    //[self.searchController setActive:YES];
+    
+
+    
+    
     
     
     
