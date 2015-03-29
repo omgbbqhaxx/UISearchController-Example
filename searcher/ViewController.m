@@ -19,6 +19,7 @@
 
 @property (strong, nonatomic) NSArray *cities;
 @property (strong, nonatomic) NSArray *results;
+@property UIBarButtonItem *searcBarButton;
 
 @end
 
@@ -51,38 +52,39 @@
     
     // Init a search controller with its table view controller for results.
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:self.searchResultsTableViewController];
+    
+    
     self.searchController.searchResultsUpdater = self;
     self.searchController.delegate = self;
     
     // Make an appropriate size for search bar and add it as a header view for initial table view.
     [self.searchController.searchBar sizeToFit];
-    self.lister.tableHeaderView = self.searchController.searchBar;
+    //self.lister.tableHeaderView = self.searchController.searchBar;
     
+
+    self.navigationItem.titleView = self.searchController.searchBar;
+    self.searchController.hidesNavigationBarDuringPresentation = NO;
+ 
     // Enable presentation context.
+    
     self.definesPresentationContext = YES;
 }
 
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    // Hide search bar.
-    [self dismissSearchBarAnimated:NO];
+    //self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"Done"
+
+    self.searcBarButton = [[UIBarButtonItem alloc]
+                                   initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searcher)];
+    self.navigationItem.rightBarButtonItem = self.searcBarButton;
+ 
+    [self.searchController.searchBar setHidden:YES];
+  
 }
 
-#pragma mark - Util methods
 
-- (void)dismissSearchBarAnimated: (BOOL)animated {
-    CGFloat offset = (self.searchController.searchBar.bounds.size.height) - (self.navigationController.navigationBar.bounds.size.height + [UIApplication sharedApplication].statusBarFrame.size.height);
-    
-    if (animated) {
-        [UIView animateWithDuration:0.5 animations:^{
-            self.lister.contentOffset = CGPointMake(0, offset);
-        }];
-    } else {
-        self.lister.contentOffset = CGPointMake(0, offset);
-    }
-}
+
 
 
 #pragma mark - Table View Data Source
@@ -116,6 +118,8 @@
     }
     
     cell.textLabel.text = text;
+    
+    
     
     return cell;
 }
@@ -151,11 +155,25 @@
 #pragma mark - Search Controller Delegate
 
 - (void)didDismissSearchController:(UISearchController *)searchController {
-    [self dismissSearchBarAnimated:YES];
+    [self.searchController.searchBar setHidden:YES];
+    self.searcBarButton = [[UIBarButtonItem alloc]
+                           initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searcher)];
+    self.navigationItem.rightBarButtonItem = self.searcBarButton;
+    
+ 
 }
 
 
 
 
+-(void)searcher {
+    self.navigationItem.rightBarButtonItem = nil;
+    self.searcBarButton = nil;
+    [self.searchController.searchBar setHidden:NO];
+    [self.searchController setActive:YES];
+    
+    
+    
+}
 @end
 
