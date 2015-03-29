@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomTableViewCell.h"
 
 @interface ViewController : UIViewController <UISearchResultsUpdating, UISearchControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *lister;
+@property UIColor * SWblue;
 
 
 

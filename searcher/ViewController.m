@@ -21,10 +21,11 @@
 @property (strong, nonatomic) NSArray *results;
 @property UIBarButtonItem *searcBarButton;
 
+
 @end
 
 @implementation ViewController
-@synthesize  lister;
+@synthesize  lister, SWblue;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,6 +33,20 @@
     self.cities = [@[@"Boston", @"New York", @"Oregon", @"Tampa", @"Los Angeles", @"Dallas", @"Miami", @"Olympia", @"Montgomery", @"Washington", @"Orlando", @"Detroit"] sortedArrayUsingComparator:^NSComparisonResult(NSString *obj1, NSString *obj2) {
         return [obj2 localizedCaseInsensitiveCompare:obj1] == NSOrderedAscending;
     }];
+    
+    
+    SWblue = [UIColor colorWithRed:0/255.0f green:195/255.0f blue:255/255.0f alpha:1.0f];
+
+    
+   
+   
+    
+    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    [self.navigationController.navigationBar setBarTintColor:SWblue];
+    
+   
     
     
     
@@ -60,25 +75,43 @@
     // Make an appropriate size for search bar and add it as a header view for initial table view.
     [self.searchController.searchBar sizeToFit];
     //self.lister.tableHeaderView = self.searchController.searchBar;
+    //self.navigationItem.titleView = self.searchController.searchBar;
     
-
-    self.navigationItem.titleView = self.searchController.searchBar;
+    self.navigationItem.title = @"Search";
+    
     self.searchController.hidesNavigationBarDuringPresentation = NO;
     
+
+    
+    
+   
     // Enable presentation context.
     self.definesPresentationContext = YES;
+    
+  
+    
 }
 
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    //self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"Done"
 
     self.searcBarButton = [[UIBarButtonItem alloc]
                                    initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searcher)];
     self.navigationItem.rightBarButtonItem = self.searcBarButton;
  
-    [self.searchController.searchBar setHidden:YES];
+
+    
+    UIImageView *cellBackView=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 320, 100)];
+    cellBackView.backgroundColor=[UIColor clearColor];
+    
+    
+    cellBackView.image = [UIImage imageNamed:@"orange"];
+    
+    
+    
+    self.lister.backgroundView = cellBackView;
+    //cell.selectionStyle=UITableViewCellSelectionStyleNone;
   
 }
 
@@ -107,7 +140,7 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier forIndexPath:indexPath];
+    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier forIndexPath:indexPath];
     
     NSString *text;
     if ([tableView isEqual:ResultsTableView]) {
@@ -117,6 +150,8 @@
     }
     
     cell.textLabel.text = text;
+    
+    [cell setBackgroundColor:[UIColor clearColor]];
     
     
     
@@ -154,7 +189,8 @@
 #pragma mark - Search Controller Delegate
 
 - (void)didDismissSearchController:(UISearchController *)searchController {
-    [self.searchController.searchBar setHidden:YES];
+    self.navigationItem.titleView = nil;
+   
     self.searcBarButton = [[UIBarButtonItem alloc]
                            initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searcher)];
     self.navigationItem.rightBarButtonItem = self.searcBarButton;
@@ -165,18 +201,15 @@
 
 
 
+
+
 -(void)searcher {
     self.navigationItem.rightBarButtonItem = nil;
     self.searcBarButton = nil;
-    [self.searchController.searchBar setHidden:NO];
+    self.navigationItem.titleView = self.searchController.searchBar;
+    //[self.searchController.searchBar setHidden:NO];
     [self.searchController.searchBar becomeFirstResponder];
-    //[self.searchController setActive:YES];
-    
-
-    
-    
-    
-    
+    [self.searchController setActive:YES];
     
 }
 @end

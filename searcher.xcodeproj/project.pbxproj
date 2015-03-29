@@ -14,6 +14,8 @@
 		CF3399F91AC7A3E200F3CB67 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3399F81AC7A3E200F3CB67 /* Images.xcassets */; };
 		CF3399FC1AC7A3E200F3CB67 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF3399FA1AC7A3E200F3CB67 /* LaunchScreen.xib */; };
 		CF339A081AC7A3E200F3CB67 /* searcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF339A071AC7A3E200F3CB67 /* searcherTests.m */; };
+		CF953BD91AC83F4E000AA9E0 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF953BD81AC83F4E000AA9E0 /* CustomTableViewCell.m */; };
+		CF953BDB1AC8648B000AA9E0 /* orange.png in Resources */ = {isa = PBXBuildFile; fileRef = CF953BDA1AC8648B000AA9E0 /* orange.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		CF339A011AC7A3E200F3CB67 /* searcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = searcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF339A061AC7A3E200F3CB67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF339A071AC7A3E200F3CB67 /* searcherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = searcherTests.m; sourceTree = "<group>"; };
+		CF953BD71AC83F4E000AA9E0 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		CF953BD81AC83F4E000AA9E0 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		CF953BDA1AC8648B000AA9E0 /* orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +86,14 @@
 		CF3399EA1AC7A3E200F3CB67 /* searcher */ = {
 			isa = PBXGroup;
 			children = (
+				CF953BDC1AC864AF000AA9E0 /* images */,
 				CF3399EF1AC7A3E200F3CB67 /* AppDelegate.h */,
 				CF3399F01AC7A3E200F3CB67 /* AppDelegate.m */,
 				CF3399F21AC7A3E200F3CB67 /* ViewController.h */,
 				CF3399F31AC7A3E200F3CB67 /* ViewController.m */,
 				CF3399F51AC7A3E200F3CB67 /* Main.storyboard */,
+				CF953BD71AC83F4E000AA9E0 /* CustomTableViewCell.h */,
+				CF953BD81AC83F4E000AA9E0 /* CustomTableViewCell.m */,
 				CF3399F81AC7A3E200F3CB67 /* Images.xcassets */,
 				CF3399FA1AC7A3E200F3CB67 /* LaunchScreen.xib */,
 				CF3399EB1AC7A3E200F3CB67 /* Supporting Files */,
@@ -117,6 +125,14 @@
 				CF339A061AC7A3E200F3CB67 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF953BDC1AC864AF000AA9E0 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				CF953BDA1AC8648B000AA9E0 /* orange.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF3399F71AC7A3E200F3CB67 /* Main.storyboard in Resources */,
+				CF953BDB1AC8648B000AA9E0 /* orange.png in Resources */,
 				CF3399FC1AC7A3E200F3CB67 /* LaunchScreen.xib in Resources */,
 				CF3399F91AC7A3E200F3CB67 /* Images.xcassets in Resources */,
 			);
@@ -221,6 +238,7 @@
 			files = (
 				CF3399F41AC7A3E200F3CB67 /* ViewController.m in Sources */,
 				CF3399F11AC7A3E200F3CB67 /* AppDelegate.m in Sources */,
+				CF953BD91AC83F4E000AA9E0 /* CustomTableViewCell.m in Sources */,
 				CF3399EE1AC7A3E200F3CB67 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +432,7 @@
 				CF339A0D1AC7A3E200F3CB67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF339A0E1AC7A3E200F3CB67 /* Build configuration list for PBXNativeTarget "searcherTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +441,7 @@
 				CF339A101AC7A3E200F3CB67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
