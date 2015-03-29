@@ -16,6 +16,8 @@
 		CF339A081AC7A3E200F3CB67 /* searcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF339A071AC7A3E200F3CB67 /* searcherTests.m */; };
 		CF953BD91AC83F4E000AA9E0 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF953BD81AC83F4E000AA9E0 /* CustomTableViewCell.m */; };
 		CF953BDB1AC8648B000AA9E0 /* orange.png in Resources */ = {isa = PBXBuildFile; fileRef = CF953BDA1AC8648B000AA9E0 /* orange.png */; };
+		CF953BDE1AC874B5000AA9E0 /* bg-cali.png in Resources */ = {isa = PBXBuildFile; fileRef = CF953BDD1AC874B5000AA9E0 /* bg-cali.png */; };
+		CF953BE11AC87A72000AA9E0 /* Sonuclar.m in Sources */ = {isa = PBXBuildFile; fileRef = CF953BE01AC87A72000AA9E0 /* Sonuclar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,9 @@
 		CF953BD71AC83F4E000AA9E0 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		CF953BD81AC83F4E000AA9E0 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		CF953BDA1AC8648B000AA9E0 /* orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange.png; sourceTree = "<group>"; };
+		CF953BDD1AC874B5000AA9E0 /* bg-cali.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-cali.png"; sourceTree = "<group>"; };
+		CF953BDF1AC87A72000AA9E0 /* Sonuclar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sonuclar.h; sourceTree = "<group>"; };
+		CF953BE01AC87A72000AA9E0 /* Sonuclar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sonuclar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +97,8 @@
 				CF3399F21AC7A3E200F3CB67 /* ViewController.h */,
 				CF3399F31AC7A3E200F3CB67 /* ViewController.m */,
 				CF3399F51AC7A3E200F3CB67 /* Main.storyboard */,
+				CF953BDF1AC87A72000AA9E0 /* Sonuclar.h */,
+				CF953BE01AC87A72000AA9E0 /* Sonuclar.m */,
 				CF953BD71AC83F4E000AA9E0 /* CustomTableViewCell.h */,
 				CF953BD81AC83F4E000AA9E0 /* CustomTableViewCell.m */,
 				CF3399F81AC7A3E200F3CB67 /* Images.xcassets */,
@@ -130,6 +137,7 @@
 		CF953BDC1AC864AF000AA9E0 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				CF953BDD1AC874B5000AA9E0 /* bg-cali.png */,
 				CF953BDA1AC8648B000AA9E0 /* orange.png */,
 			);
 			name = images;
@@ -217,6 +225,7 @@
 			files = (
 				CF3399F71AC7A3E200F3CB67 /* Main.storyboard in Resources */,
 				CF953BDB1AC8648B000AA9E0 /* orange.png in Resources */,
+				CF953BDE1AC874B5000AA9E0 /* bg-cali.png in Resources */,
 				CF3399FC1AC7A3E200F3CB67 /* LaunchScreen.xib in Resources */,
 				CF3399F91AC7A3E200F3CB67 /* Images.xcassets in Resources */,
 			);
@@ -240,6 +249,7 @@
 				CF3399F11AC7A3E200F3CB67 /* AppDelegate.m in Sources */,
 				CF953BD91AC83F4E000AA9E0 /* CustomTableViewCell.m in Sources */,
 				CF3399EE1AC7A3E200F3CB67 /* main.m in Sources */,
+				CF953BE11AC87A72000AA9E0 /* Sonuclar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

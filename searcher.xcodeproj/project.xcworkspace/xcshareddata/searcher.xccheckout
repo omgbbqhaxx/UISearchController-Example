@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7B6DC9C5-9990-43B9-A9F4-67B6D70A0AD7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>searcher</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>56C2717C8EAB9E0DB13233C64C987FEB803B5C99</key>
+		<string>https://github.com/omgbbqhaxx/UISearchController-Example.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>searcher.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>56C2717C8EAB9E0DB13233C64C987FEB803B5C99</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/omgbbqhaxx/UISearchController-Example.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>56C2717C8EAB9E0DB13233C64C987FEB803B5C99</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>56C2717C8EAB9E0DB13233C64C987FEB803B5C99</string>
+			<key>IDESourceControlWCCName</key>
+			<string>searcher</string>
+		</dict>
+	</array>
+</dict>
+</plist>

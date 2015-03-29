@@ -77,7 +77,7 @@
     //self.lister.tableHeaderView = self.searchController.searchBar;
     //self.navigationItem.titleView = self.searchController.searchBar;
     
-    self.navigationItem.title = @"Search";
+    self.navigationItem.title = @"Trends";
     
     self.searchController.hidesNavigationBarDuringPresentation = NO;
     
@@ -99,19 +99,7 @@
     self.searcBarButton = [[UIBarButtonItem alloc]
                                    initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searcher)];
     self.navigationItem.rightBarButtonItem = self.searcBarButton;
- 
 
-    
-    UIImageView *cellBackView=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 320, 100)];
-    cellBackView.backgroundColor=[UIColor clearColor];
-    
-    
-    cellBackView.image = [UIImage imageNamed:@"orange"];
-    
-    
-    
-    self.lister.backgroundView = cellBackView;
-    //cell.selectionStyle=UITableViewCellSelectionStyleNone;
   
 }
 
@@ -141,6 +129,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier forIndexPath:indexPath];
+    //cell.selectionStyle=UITableViewCellSelectionStyleNone;
+    
     
     NSString *text;
     if ([tableView isEqual:ResultsTableView]) {
@@ -197,6 +187,8 @@
     
  
 }
+
+
 
 
 
