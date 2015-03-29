@@ -16,10 +16,6 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-    
-    //UIImage *bgImage = [UIImage imageNamed:@"orange.png"];
-    //self.backgroundView =  [[UIImageView alloc] initWithImage:bgImage];
-    [self setBackgroundColor:[UIColor clearColor]];
    
 }
 

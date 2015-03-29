@@ -58,8 +58,10 @@
     searchResultsTableView.delegate = self.lister.delegate;
     
     // Registration of reuse identifiers.
+    
     [searchResultsTableView registerClass:UITableViewCell.class forCellReuseIdentifier:Identifier];
-    [self.lister registerClass:UITableViewCell.class forCellReuseIdentifier:Identifier];
+    
+    //[self.lister registerClass:UITableViewCell.class forCellReuseIdentifier:Identifier];
     
     // Init a search results table view controller and setting its table view.
     self.searchResultsTableViewController = [[UITableViewController alloc] init];
@@ -128,9 +130,9 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier forIndexPath:indexPath];
-    //cell.selectionStyle=UITableViewCellSelectionStyleNone;
     
+    
+    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier forIndexPath:indexPath];
     
     NSString *text;
     if ([tableView isEqual:ResultsTableView]) {
@@ -199,7 +201,6 @@
     self.navigationItem.rightBarButtonItem = nil;
     self.searcBarButton = nil;
     self.navigationItem.titleView = self.searchController.searchBar;
-    //[self.searchController.searchBar setHidden:NO];
     [self.searchController.searchBar becomeFirstResponder];
     [self.searchController setActive:YES];
     
