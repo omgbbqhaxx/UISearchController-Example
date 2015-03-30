@@ -95,11 +95,18 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
-    self.searcBarButton = [[UIBarButtonItem alloc]
+    if (self.navigationItem.rightBarButtonItem) {
+        NSLog(@"icon alredy exist");
+    }else {
+        if (!self.searchController.active) {
+            
+            self.searcBarButton = [[UIBarButtonItem alloc]
                                    initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searcher)];
-    self.navigationItem.rightBarButtonItem = self.searcBarButton;
-
-  
+            self.navigationItem.rightBarButtonItem = self.searcBarButton;
+           
+        }
+    }
+    
 }
 
 
@@ -135,7 +142,7 @@
     if (self.searchController.active) {
         text = self.results[indexPath.row];
         cell.textLabel.text = text;
-        [cell setBackgroundColor:[UIColor redColor]];
+        [cell setBackgroundColor:[UIColor grayColor]];
         [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
         return cell;
     } else {
@@ -181,11 +188,16 @@
 #pragma mark - Search Controller Delegate
 
 - (void)didDismissSearchController:(UISearchController *)searchController {
+    //reload Data TABLE
+    [self.lister reloadData];
+    
+    //hidesearchbox
     self.navigationItem.titleView = nil;
-   
+    //reCreate search icon
     self.searcBarButton = [[UIBarButtonItem alloc]
                            initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searcher)];
     self.navigationItem.rightBarButtonItem = self.searcBarButton;
+    
     
  
 }
