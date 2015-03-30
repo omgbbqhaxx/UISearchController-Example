@@ -15,8 +15,6 @@
 		CF3399FC1AC7A3E200F3CB67 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF3399FA1AC7A3E200F3CB67 /* LaunchScreen.xib */; };
 		CF339A081AC7A3E200F3CB67 /* searcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF339A071AC7A3E200F3CB67 /* searcherTests.m */; };
 		CF953BD91AC83F4E000AA9E0 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF953BD81AC83F4E000AA9E0 /* CustomTableViewCell.m */; };
-		CF953BDB1AC8648B000AA9E0 /* orange.png in Resources */ = {isa = PBXBuildFile; fileRef = CF953BDA1AC8648B000AA9E0 /* orange.png */; };
-		CF953BDE1AC874B5000AA9E0 /* bg-cali.png in Resources */ = {isa = PBXBuildFile; fileRef = CF953BDD1AC874B5000AA9E0 /* bg-cali.png */; };
 		CF953BE11AC87A72000AA9E0 /* Sonuclar.m in Sources */ = {isa = PBXBuildFile; fileRef = CF953BE01AC87A72000AA9E0 /* Sonuclar.m */; };
 		CF994EA41AC9B46E006B5687 /* UIColor+FlatColors.m in Sources */ = {isa = PBXBuildFile; fileRef = CF994EA31AC9B46E006B5687 /* UIColor+FlatColors.m */; };
 		CF994EAA1AC9BF83006B5687 /* Panton-BlackCaps.otf in Resources */ = {isa = PBXBuildFile; fileRef = CF994EA61AC9BF83006B5687 /* Panton-BlackCaps.otf */; };
@@ -51,8 +49,6 @@
 		CF339A071AC7A3E200F3CB67 /* searcherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = searcherTests.m; sourceTree = "<group>"; };
 		CF953BD71AC83F4E000AA9E0 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		CF953BD81AC83F4E000AA9E0 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
-		CF953BDA1AC8648B000AA9E0 /* orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange.png; sourceTree = "<group>"; };
-		CF953BDD1AC874B5000AA9E0 /* bg-cali.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-cali.png"; sourceTree = "<group>"; };
 		CF953BDF1AC87A72000AA9E0 /* Sonuclar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sonuclar.h; sourceTree = "<group>"; };
 		CF953BE01AC87A72000AA9E0 /* Sonuclar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sonuclar.m; sourceTree = "<group>"; };
 		CF994EA21AC9B46E006B5687 /* UIColor+FlatColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FlatColors.h"; sourceTree = "<group>"; };
@@ -104,7 +100,6 @@
 			children = (
 				CF994EA51AC9BF83006B5687 /* panton */,
 				CF994EA11AC9B46E006B5687 /* UIColor+FlatColors */,
-				CF953BDC1AC864AF000AA9E0 /* images */,
 				CF3399EF1AC7A3E200F3CB67 /* AppDelegate.h */,
 				CF3399F01AC7A3E200F3CB67 /* AppDelegate.m */,
 				CF3399F21AC7A3E200F3CB67 /* ViewController.h */,
@@ -145,15 +140,6 @@
 				CF339A061AC7A3E200F3CB67 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		CF953BDC1AC864AF000AA9E0 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				CF953BDD1AC874B5000AA9E0 /* bg-cali.png */,
-				CF953BDA1AC8648B000AA9E0 /* orange.png */,
-			);
-			name = images;
 			sourceTree = "<group>";
 		};
 		CF994EA11AC9B46E006B5687 /* UIColor+FlatColors */ = {
@@ -258,8 +244,6 @@
 			files = (
 				CF994EAA1AC9BF83006B5687 /* Panton-BlackCaps.otf in Resources */,
 				CF3399F71AC7A3E200F3CB67 /* Main.storyboard in Resources */,
-				CF953BDB1AC8648B000AA9E0 /* orange.png in Resources */,
-				CF953BDE1AC874B5000AA9E0 /* bg-cali.png in Resources */,
 				CF3399FC1AC7A3E200F3CB67 /* LaunchScreen.xib in Resources */,
 				CF3399F91AC7A3E200F3CB67 /* Images.xcassets in Resources */,
 				CF994EAD1AC9BF83006B5687 /* Panton-LightitalicCaps.otf in Resources */,
