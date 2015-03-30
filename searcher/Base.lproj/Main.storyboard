@@ -26,9 +26,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x7a-gD-NpU" id="R5t-B7-N9y">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Yl0-kx-EuO" kind="show" identifier="go" id="wC2-q6-b5V"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -43,11 +40,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="lister" destination="HJN-Rt-HaI" id="ceQ-nx-fe4"/>
+                        <segue destination="Yl0-kx-EuO" kind="show" identifier="go" id="spc-76-HeT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1355.5" y="336.5"/>
+            <point key="canvasLocation" x="1195.5" y="330.5"/>
         </scene>
         <!--Sonuclar-->
         <scene sceneID="uWb-tH-zNb">
@@ -74,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sE1-Kc-Cqt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1796.5" y="336.5"/>
+            <point key="canvasLocation" x="1656.5" y="330.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HTL-JT-lWp">

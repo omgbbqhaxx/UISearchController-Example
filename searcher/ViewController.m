@@ -46,10 +46,6 @@
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     [self.navigationController.navigationBar setBarTintColor:SWblue];
     
-   
-    
-    
-    
     self.results = [[NSMutableArray alloc] init];
     
     // A table view for results.
@@ -61,11 +57,12 @@
     
     [searchResultsTableView registerClass:UITableViewCell.class forCellReuseIdentifier:Identifier];
     
-    //[self.lister registerClass:UITableViewCell.class forCellReuseIdentifier:Identifier];
+   
     
     // Init a search results table view controller and setting its table view.
     self.searchResultsTableViewController = [[UITableViewController alloc] init];
     self.searchResultsTableViewController.tableView = searchResultsTableView;
+    
     
     // Init a search controller with its table view controller for results.
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:self.searchResultsTableViewController];
@@ -116,7 +113,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if ([tableView isEqual:ResultsTableView]) {
+    if (self.searchController.active) {
         if (self.results) {
             return self.results.count;
         } else {
@@ -131,29 +128,32 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
     CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier forIndexPath:indexPath];
     
     NSString *text;
-    if ([tableView isEqual:ResultsTableView]) {
+    
+    if (self.searchController.active) {
         text = self.results[indexPath.row];
+        cell.textLabel.text = text;
+        [cell setBackgroundColor:[UIColor redColor]];
+        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+        return cell;
     } else {
+       
         text = self.cities[indexPath.row];
+        cell.textLabel.text = text;
+        [cell setBackgroundColor:[UIColor clearColor]];
+        return cell;
     }
     
-    cell.textLabel.text = text;
     
-    [cell setBackgroundColor:[UIColor clearColor]];
-    
-    
-    
-    return cell;
 }
 
 #pragma mark - Table View Delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:true];
+    [self performSegueWithIdentifier:@"go" sender:self];
 }
 
 #pragma mark - Search Results Updating
