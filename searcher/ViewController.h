@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CustomTableViewCell.h"
+#import "UIColor+FlatColors.h"
 
 @interface ViewController : UIViewController <UISearchResultsUpdating, UISearchControllerDelegate>
 

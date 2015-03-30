@@ -18,6 +18,11 @@
 		CF953BDB1AC8648B000AA9E0 /* orange.png in Resources */ = {isa = PBXBuildFile; fileRef = CF953BDA1AC8648B000AA9E0 /* orange.png */; };
 		CF953BDE1AC874B5000AA9E0 /* bg-cali.png in Resources */ = {isa = PBXBuildFile; fileRef = CF953BDD1AC874B5000AA9E0 /* bg-cali.png */; };
 		CF953BE11AC87A72000AA9E0 /* Sonuclar.m in Sources */ = {isa = PBXBuildFile; fileRef = CF953BE01AC87A72000AA9E0 /* Sonuclar.m */; };
+		CF994EA41AC9B46E006B5687 /* UIColor+FlatColors.m in Sources */ = {isa = PBXBuildFile; fileRef = CF994EA31AC9B46E006B5687 /* UIColor+FlatColors.m */; };
+		CF994EAA1AC9BF83006B5687 /* Panton-BlackCaps.otf in Resources */ = {isa = PBXBuildFile; fileRef = CF994EA61AC9BF83006B5687 /* Panton-BlackCaps.otf */; };
+		CF994EAB1AC9BF83006B5687 /* Panton-BlackitalicCaps.otf in Resources */ = {isa = PBXBuildFile; fileRef = CF994EA71AC9BF83006B5687 /* Panton-BlackitalicCaps.otf */; };
+		CF994EAC1AC9BF83006B5687 /* Panton-LightCaps.otf in Resources */ = {isa = PBXBuildFile; fileRef = CF994EA81AC9BF83006B5687 /* Panton-LightCaps.otf */; };
+		CF994EAD1AC9BF83006B5687 /* Panton-LightitalicCaps.otf in Resources */ = {isa = PBXBuildFile; fileRef = CF994EA91AC9BF83006B5687 /* Panton-LightitalicCaps.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +55,12 @@
 		CF953BDD1AC874B5000AA9E0 /* bg-cali.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-cali.png"; sourceTree = "<group>"; };
 		CF953BDF1AC87A72000AA9E0 /* Sonuclar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sonuclar.h; sourceTree = "<group>"; };
 		CF953BE01AC87A72000AA9E0 /* Sonuclar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sonuclar.m; sourceTree = "<group>"; };
+		CF994EA21AC9B46E006B5687 /* UIColor+FlatColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FlatColors.h"; sourceTree = "<group>"; };
+		CF994EA31AC9B46E006B5687 /* UIColor+FlatColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FlatColors.m"; sourceTree = "<group>"; };
+		CF994EA61AC9BF83006B5687 /* Panton-BlackCaps.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-BlackCaps.otf"; sourceTree = "<group>"; };
+		CF994EA71AC9BF83006B5687 /* Panton-BlackitalicCaps.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-BlackitalicCaps.otf"; sourceTree = "<group>"; };
+		CF994EA81AC9BF83006B5687 /* Panton-LightCaps.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-LightCaps.otf"; sourceTree = "<group>"; };
+		CF994EA91AC9BF83006B5687 /* Panton-LightitalicCaps.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-LightitalicCaps.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +102,8 @@
 		CF3399EA1AC7A3E200F3CB67 /* searcher */ = {
 			isa = PBXGroup;
 			children = (
+				CF994EA51AC9BF83006B5687 /* panton */,
+				CF994EA11AC9B46E006B5687 /* UIColor+FlatColors */,
 				CF953BDC1AC864AF000AA9E0 /* images */,
 				CF3399EF1AC7A3E200F3CB67 /* AppDelegate.h */,
 				CF3399F01AC7A3E200F3CB67 /* AppDelegate.m */,
@@ -141,6 +154,26 @@
 				CF953BDA1AC8648B000AA9E0 /* orange.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		CF994EA11AC9B46E006B5687 /* UIColor+FlatColors */ = {
+			isa = PBXGroup;
+			children = (
+				CF994EA21AC9B46E006B5687 /* UIColor+FlatColors.h */,
+				CF994EA31AC9B46E006B5687 /* UIColor+FlatColors.m */,
+			);
+			path = "UIColor+FlatColors";
+			sourceTree = "<group>";
+		};
+		CF994EA51AC9BF83006B5687 /* panton */ = {
+			isa = PBXGroup;
+			children = (
+				CF994EA61AC9BF83006B5687 /* Panton-BlackCaps.otf */,
+				CF994EA71AC9BF83006B5687 /* Panton-BlackitalicCaps.otf */,
+				CF994EA81AC9BF83006B5687 /* Panton-LightCaps.otf */,
+				CF994EA91AC9BF83006B5687 /* Panton-LightitalicCaps.otf */,
+			);
+			path = panton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,11 +256,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF994EAA1AC9BF83006B5687 /* Panton-BlackCaps.otf in Resources */,
 				CF3399F71AC7A3E200F3CB67 /* Main.storyboard in Resources */,
 				CF953BDB1AC8648B000AA9E0 /* orange.png in Resources */,
 				CF953BDE1AC874B5000AA9E0 /* bg-cali.png in Resources */,
 				CF3399FC1AC7A3E200F3CB67 /* LaunchScreen.xib in Resources */,
 				CF3399F91AC7A3E200F3CB67 /* Images.xcassets in Resources */,
+				CF994EAD1AC9BF83006B5687 /* Panton-LightitalicCaps.otf in Resources */,
+				CF994EAB1AC9BF83006B5687 /* Panton-BlackitalicCaps.otf in Resources */,
+				CF994EAC1AC9BF83006B5687 /* Panton-LightCaps.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +284,7 @@
 			files = (
 				CF3399F41AC7A3E200F3CB67 /* ViewController.m in Sources */,
 				CF3399F11AC7A3E200F3CB67 /* AppDelegate.m in Sources */,
+				CF994EA41AC9B46E006B5687 /* UIColor+FlatColors.m in Sources */,
 				CF953BD91AC83F4E000AA9E0 /* CustomTableViewCell.m in Sources */,
 				CF3399EE1AC7A3E200F3CB67 /* main.m in Sources */,
 				CF953BE11AC87A72000AA9E0 /* Sonuclar.m in Sources */,

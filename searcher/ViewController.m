@@ -19,6 +19,8 @@
 
 @property (strong, nonatomic) NSArray *cities;
 @property (strong, nonatomic) NSArray *results;
+@property (strong, nonatomic) NSArray *colorList;
+
 @property UIBarButtonItem *searcBarButton;
 
 
@@ -30,10 +32,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Arrays init & sorting.
-    self.cities = [@[@"Boston", @"New York", @"Oregon", @"Tampa", @"Los Angeles", @"Dallas", @"Miami", @"Olympia", @"Montgomery", @"Washington", @"Orlando", @"Detroit"] sortedArrayUsingComparator:^NSComparisonResult(NSString *obj1, NSString *obj2) {
+    self.cities = [@[@"Boston", @"New York", @"Oregon", @"Tampa", @"Los Angeles", @"Dallas", @"Miami", @"Olympia", @"Montgomery", @"Washington", @"Orlando", @"Detroit",@"izmir*", @"Istanbul", @"Bursa",@"Ankara",@"Athina",@"Paris",@"Smyrna",@"Neverland"] sortedArrayUsingComparator:^NSComparisonResult(NSString *obj1, NSString *obj2) {
         return [obj2 localizedCaseInsensitiveCompare:obj1] == NSOrderedAscending;
     }];
     
+    self.colorList = @[[UIColor flatPeterRiverColor],[UIColor flatBelizeHoleColor], [UIColor flatTurquoiseColor],[UIColor flatGreenSeaColor],[UIColor flatEmeraldColor],[UIColor flatNephritisColor],[UIColor flatAmethystColor],[UIColor flatWisteriaColor],[UIColor flatWetAsphaltColor],[UIColor flatMidnightBlueColor],[UIColor flatSunFlowerColor],[UIColor flatOrangeColor],[UIColor flatCarrotColor],[UIColor flatPumpkinColor],[UIColor flatAlizarinColor],[UIColor flatPomegranateColor],[UIColor flatCloudsColor],[UIColor flatSilverColor],[UIColor flatConcreteColor],[UIColor flatAsbestosColor]];
+    
+
+    [lister setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+
     
     SWblue = [UIColor colorWithRed:0/255.0f green:195/255.0f blue:255/255.0f alpha:1.0f];
 
@@ -76,7 +83,7 @@
     //self.lister.tableHeaderView = self.searchController.searchBar;
     //self.navigationItem.titleView = self.searchController.searchBar;
     
-    self.navigationItem.title = @"Trends";
+    self.navigationItem.title = @"#TopTrend";
     
     self.searchController.hidesNavigationBarDuringPresentation = NO;
     
@@ -128,7 +135,8 @@
         }
     } else {
         
-        return self.cities.count;
+        //return self.cities.count;
+        return self.colorList.count;
     }
 }
 
@@ -148,8 +156,12 @@
     } else {
        
         text = self.cities[indexPath.row];
+        //text = self.colorList[indexPath.row];
         cell.textLabel.text = text;
-        [cell setBackgroundColor:[UIColor clearColor]];
+        //[cell setBackgroundColor:[UIColor clearColor]];
+        [cell setBackgroundColor:self.colorList[indexPath.row]];
+        
+        
         return cell;
     }
     
@@ -200,6 +212,11 @@
     
     
  
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 75.0;
 }
 
 
