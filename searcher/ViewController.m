@@ -44,10 +44,7 @@
     
     SWblue = [UIColor colorWithRed:0/255.0f green:195/255.0f blue:255/255.0f alpha:1.0f];
 
-    
-   
-   
-    
+
     self.navigationController.navigationBar.translucent = YES;
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
@@ -148,19 +145,24 @@
     NSString *text;
     
     if (self.searchController.active) {
+        cell.textLabel.font = [UIFont fontWithName:@"Panton-BlackitalicCaps" size:18.0];
+        cell.textLabel.textColor = [UIColor whiteColor];
         text = self.results[indexPath.row];
         cell.textLabel.text = text;
-        [cell setBackgroundColor:[UIColor grayColor]];
+        [cell setBackgroundColor:self.colorList[indexPath.row]];
         [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+        cell.textLabel.textAlignment = NSTextAlignmentCenter ;
+        
         return cell;
     } else {
-       
+       cell.textLabel.font = [UIFont fontWithName:@"Panton-BlackCaps" size:16.0];
+        cell.textLabel.textColor = [UIColor whiteColor];
         text = self.cities[indexPath.row];
         //text = self.colorList[indexPath.row];
         cell.textLabel.text = text;
         //[cell setBackgroundColor:[UIColor clearColor]];
         [cell setBackgroundColor:self.colorList[indexPath.row]];
-        
+        cell.textLabel.textAlignment = NSTextAlignmentCenter ;
         
         return cell;
     }
